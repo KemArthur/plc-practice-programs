@@ -27,14 +27,6 @@ Rung comments:
 2. Duty pump runs on demand while its overload is healthy.
 3. Backup pump takes over automatically if the duty pump's overload trips.
 
-## Logic as structured text
-
-```
-System_Run       := NOT Stop_PB AND (Start_PB OR System_Run);
-Duty_Fuel_Pump   := NOT Overload_Trip AND System_Run;
-Backup_Fuel_Pump := Overload_Trip AND System_Run;
-```
-
 ## Design notes
 
 - The demand bit (`System_Run`) is what makes this work. Without it, the backup pump would run whenever the overload was tripped, even if nobody had asked for fuel. The program has to remember that the operator pressed Start.

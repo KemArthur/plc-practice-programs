@@ -34,15 +34,6 @@ Rung comments:
 3. Fan can only start while the chilled water pump is running (interlock). Fan Stop, or the pump stopping, drops the latch. The fan does not restart by itself when the pump restarts.
 4. Drives the cooling tower fan contactor from its latched command.
 
-## Logic as structured text
-
-```
-Chilled_Water_Pump_Run := NOT Pump_Stop_PB AND (Chilled_Water_Pump_Run OR Pump_Start_PB);
-Chilled_Water_Pump     := Chilled_Water_Pump_Run;
-Cooling_Tower_Fan_Run  := NOT Fan_Stop_PB AND (Cooling_Tower_Fan_Run OR Fan_Start_PB) AND Chilled_Water_Pump;
-Cooling_Tower_Fan      := Cooling_Tower_Fan_Run;
-```
-
 ## Design notes
 
 - Each run command is a memory bit, and a separate rung drives the output from it. That keeps the logic (when should it run?) apart from the output (switch the contactor), which makes adding interlocks or fault logic later easier.

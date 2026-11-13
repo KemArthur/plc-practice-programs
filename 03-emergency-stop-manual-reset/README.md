@@ -29,13 +29,6 @@ Rung comments:
 1. Start latches the vent fan command on. Stop or the emergency stop drops it and stops the vent fan.
 2. Drives the vent fan contactor from its latched command.
 
-## Logic as structured text
-
-```
-System_Run := NOT E_Stop_PB AND NOT Stop_PB AND (Start_PB OR System_Run);
-Vent_Fan   := System_Run;
-```
-
 ## Design notes
 
 - The E-stop sits **in the latch rung**, not just on the output. Pressing it drops `System_Run`, which removes the seal-in. When the E-stop is released, nothing is holding the fan on, so only a fresh press of Start can restart it.

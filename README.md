@@ -1,6 +1,6 @@
 # plc-practice-programs
 
-Practice PLC programs in ladder logic, built and tested in OpenPLC Editor. Each program has a brief, an I/O list, commented ladder, the logic written out as structured text, and a test record.
+Practice PLC programs in ladder logic, built and tested in OpenPLC Editor. Each program has a brief, an I/O list, the commented ladder and a test record.
 
 I'm an electrical engineering technician moving into control systems software. These programs are where I practise writing, documenting and testing PLC code the way it's done on a real project: a clear brief, a proper I/O list, a comment on every rung, and a test record that proves the program does what the brief says.
 

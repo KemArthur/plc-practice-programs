@@ -27,15 +27,6 @@ Rung comments:
 2. Pump A starts as soon as the run command is on.
 3. Pump B starts 5 s after the run command, so both pumps don't start together. Stop resets the timer.
 
-## Logic as structured text
-
-```
-System_Run     := NOT Master_Stop_PB AND (Master_Start_PB OR System_Run);
-Cooling_Pump_A := System_Run;
-Pump_B_Delay(IN := System_Run, PT := T#5s);
-Cooling_Pump_B := Pump_B_Delay.Q;
-```
-
 ## Design notes
 
 - The timer's input is the run command, not pump A's output. If pump A later gets its own interlocks or a trip, pump B's delay is still tied to what the operator asked for.

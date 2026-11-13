@@ -20,7 +20,11 @@ A ventilation fan on a Start/Stop latch, plus an emergency stop.
 | Vent_Fan | Output | %QX2.0 | Vent fan contactor |
 | System_Run | Memory | none | Fan run command. Latched by Start_PB, dropped by Stop_PB or E_Stop_PB |
 
-## Ladder (rung comments)
+## Ladder
+
+![Ladder diagram in OpenPLC Editor](ladder.png)
+
+Rung comments:
 
 1. Start latches the vent fan command on. Stop or the emergency stop drops it and stops the vent fan.
 2. Drives the vent fan contactor from its latched command.

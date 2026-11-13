@@ -17,7 +17,11 @@ Two cooling pumps on one Start/Stop latch. Pump A starts at once. Pump B starts 
 | System_Run | Memory | none | Run command for both cooling pumps. Latched on by Master_Start_PB, dropped by Master_Stop_PB |
 | Pump_B_Delay | Timer (TON) | none | 5 s start delay for pump B. Times while System_Run is on, resets when it drops |
 
-## Ladder (rung comments)
+## Ladder
+
+![Ladder diagram in OpenPLC Editor](ladder.png)
+
+Rung comments:
 
 1. Start latches the run command on, stop drops it and stops the cooling pumps.
 2. Pump A starts as soon as the run command is on.

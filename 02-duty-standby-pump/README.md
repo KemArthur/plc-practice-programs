@@ -17,7 +17,11 @@ A duty fuel pump on a Start/Stop latch, with an overload trip input. If the over
 | Backup_Fuel_Pump | Output | %QX1.1 | Backup fuel pump contactor |
 | System_Run | Memory | none | Fuel demand. Latched by Start_PB, dropped by Stop_PB |
 
-## Ladder (rung comments)
+## Ladder
+
+![Ladder diagram in OpenPLC Editor](ladder.png)
+
+Rung comments:
 
 1. Start latches the fuel demand on. Stop drops it and stops both pumps.
 2. Duty pump runs on demand while its overload is healthy.

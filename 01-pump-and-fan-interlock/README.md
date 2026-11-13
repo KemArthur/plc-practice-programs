@@ -23,7 +23,11 @@ A chilled water pump and a cooling tower fan, each with its own Start and Stop b
 | Chilled_Water_Pump_Run | Memory | none | Pump run command. Latched by Pump_Start_PB, dropped by Pump_Stop_PB |
 | Cooling_Tower_Fan_Run | Memory | none | Fan run command. Latched by Fan_Start_PB, needs the pump running, dropped by Fan_Stop_PB |
 
-## Ladder (rung comments)
+## Ladder
+
+![Ladder diagram in OpenPLC Editor](ladder.png)
+
+Rung comments:
 
 1. Start latches the pump command on. Stop drops it.
 2. Drives the chilled water pump contactor from its latched command.

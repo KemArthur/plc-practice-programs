@@ -13,7 +13,7 @@ PROGRAM AssignmentSix
   "rungs": [
     {
       "id": "rung_AssignmentSix_a0ad9b72-a683-4e8c-8d8d-bfd7cfa51663",
-      "comment": "Fuel pump latches on with Start and stops with Stop. While the maintenance alarm is on, Start is blocked, but a pump already running carries on until stopped",
+      "comment": "Fuel pump latches on with Start and stops with Stop. While the maintenance alarm is on, Start is blocked, but a pump already running carries on until stopped.",
       "defaultBounds": [
         300,
         100
@@ -1456,7 +1456,7 @@ PROGRAM AssignmentSix
     },
     {
       "id": "rung_AssignmentSix_381e2061-3327-483f-90e4-9b9c0e86de76",
-      "comment": "Counts fuel pump starts. After 5 starts the maintenance alarm comes on, so the pump gets its service check before running again. Alarm reset clears the count",
+      "comment": "Counts fuel pump starts. After 5 starts the maintenance alarm comes on, so the pump gets its service check before running again. Alarm reset clears the count.",
       "defaultBounds": [
         300,
         100

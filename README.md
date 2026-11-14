@@ -12,8 +12,9 @@ I'm an electrical engineering technician moving into control systems software. T
 | 02 | [Duty/standby pump](02-duty-standby-pump/) | Automatic changeover to a standby pump on an overload trip | Yes |
 | 03 | [Emergency stop with manual reset](03-emergency-stop-manual-reset/) | E-stop drops the run latch; release doesn't restart the plant | Yes |
 | 04 | [Staggered pump start](04-staggered-pump-start/) | On-delay timer (TON) to stagger two motor starts | Yes |
+| 05 | [Slosh filter](05-slosh-filter/) | On-delay timer (TON) as a filter, so a flickering float doesn't chatter the pump | Yes |
 
-More to follow: input debounce with a timer, run counting with a maintenance lockout, chained timers, and duty rotation.
+More to follow: run counting with a maintenance lockout, chained timers, and duty rotation.
 
 ## Wiring convention
 
